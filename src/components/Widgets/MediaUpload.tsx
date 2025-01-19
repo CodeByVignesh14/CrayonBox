@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Colors from '../../themes/colors';
-import UploadIcon from '../../assets/icons/upload.svg';
+import UploadIcon from '../../assets/icons/Upload.svg';
 type MediaUploadProps = {
   label?: string;
 };
