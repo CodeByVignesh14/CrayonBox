@@ -7,9 +7,10 @@ type ScreenHeaderProps = {
   title: string;
   headerColor:string
   rightContent?: React.ReactNode;
+  titleColor?:string;
 };
 
-const ScreenHeader: React.FC<ScreenHeaderProps> = ({ title, headerColor = 'white',rightContent }) => {
+const ScreenHeader: React.FC<ScreenHeaderProps> = ({ title, headerColor = 'white',rightContent,titleColor='black' }) => {
   const navigation = useNavigation();
 
   return (
@@ -20,7 +21,7 @@ const ScreenHeader: React.FC<ScreenHeaderProps> = ({ title, headerColor = 'white
       </TouchableOpacity>
 
       {/* Title */}
-      <Text style={styles.title}>{title}</Text>
+      <Text style={[styles.title,{color:titleColor}]}>{title}</Text>
 
       {/* Right Content */}
       <View style={styles.rightContent}>{rightContent}</View>
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontFamily:'Poppins-Bold',
-    color: 'black',
+
     flex: 1,
   },
   rightContent: {

@@ -8,6 +8,13 @@ import DiaryScreen from '../screens/DiaryScreen/DiaryScreen';
 import PaymentListScreen from '../screens/PaymentsScreen/PaymentList/PaymentListScreen';
 import PaymentScreen from '../screens/PaymentsScreen/Payment/PaymentScreen';
 import AssignmentDetailsScreen from '../screens/AssignmentDetails/AssignmentDetailsScreen';
+import PaymentDetails from '../screens/PaymentsScreen/PaymentDetails/PaymentDetails';
+import PaymentStatus from '../screens/PaymentsScreen/PaymentStatus/PaymentStatus';
+import ResultScreen from '../screens/Results/ResultScreen';
+import AttendanceScreen from '../screens/AttendanceScreen/AttendanceScreen';
+import TimeTableScreen from '../screens/TimeTableScreen/TimeTableScreen';
+import LeaveApplicationScreen from '../screens/LeaveApplicationScreen/LeaveApplicationScreen';
+import ProfileScreen from '../screens/ProfileScreen/ProfileScreen';
 
 // Define the types for navigation
 export type RootStackParamList = {
@@ -19,6 +26,12 @@ export type RootStackParamList = {
   PaymentList:undefined;
   Payment:undefined;
   AssignmentDetails:undefined;
+  PaymentDetails:undefined;
+  PaymentStatus:undefined;
+  Results:undefined;
+  Attendance:undefined;
+  TimeTable:undefined;
+  LeaveApplication:undefined;
 };
 
 // Create the stack navigator
@@ -33,16 +46,24 @@ const RootNavigator = () => {
       <Stack.Navigator
             initialRouteName="Login"
             screenOptions={{
-                headerShown: false, // Optional: Remove header if not needed
-                gestureEnabled: true, // Enable swipe gestures
+                headerShown: false,
+                gestureEnabled: true,
+                animation:'slide_from_right'
               }}>
-        <Stack.Screen name="Login" component={LoginScreen} options={{ animation: 'slide_from_right' }}/>
-        <Stack.Screen name="ForgetPassword" component={ForgetPasswordScreen} options={{ animation: 'slide_from_right' }} />
-        <Stack.Screen name="Dashboard" component={DashboardScreen} options={{ animation: 'slide_from_right' }} />
-        <Stack.Screen name="Diary" component={DiaryScreen} options={{ animation: 'slide_from_right' }} />
-        <Stack.Screen name="AssignmentDetails" component={AssignmentDetailsScreen} options={{ animation: 'slide_from_right' }} />
-        <Stack.Screen name="PaymentList" component={PaymentListScreen} options={{ animation: 'slide_from_right' }} />
-        <Stack.Screen name="Payment" component={PaymentScreen} options={{ animation: 'slide_from_right' }} />
+        <Stack.Screen name="Login" component={LoginScreen}/>
+        <Stack.Screen name="ForgetPassword" component={ForgetPasswordScreen} />
+        <Stack.Screen name="Dashboard" component={DashboardScreen} />
+        <Stack.Screen name="Diary" component={DiaryScreen} />
+        <Stack.Screen name="AssignmentDetails" component={AssignmentDetailsScreen} />
+        <Stack.Screen name="PaymentList" component={PaymentListScreen} />
+        <Stack.Screen name="Payment" component={PaymentScreen} />
+        <Stack.Screen name="PaymentDetails" component={PaymentDetails} />
+        <Stack.Screen name="PaymentStatus" component={PaymentStatus} />
+        <Stack.Screen name="Results" component={ResultScreen} />
+        <Stack.Screen name="Attendance" component={AttendanceScreen} />
+        <Stack.Screen name="TimeTable" component={TimeTableScreen} />
+        <Stack.Screen name="LeaveApplication" component={LeaveApplicationScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

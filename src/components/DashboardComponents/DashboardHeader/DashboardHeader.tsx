@@ -4,17 +4,20 @@ import NotificationIcon from '../../../assets/icons/NotificationIcon.svg';
 import CrayonLogo from '../../../assets/logos/CrayonBoxLogo.svg';
 import Colors from '../../../themes/colors';
 import Avatar from '../../Avatar/Avatar';
+import { useNavigation } from '@react-navigation/native';
+import { ProfileScreenProps } from '../../../screens/ProfileScreen/ProfileScreen.types';
 
 type DashboardHeaderProps = {
   imageUrl?: string; // Optional image URL for the avatar
 };
 
 const DashboardHeader = ({ imageUrl }: DashboardHeaderProps) => {
+const navigation = useNavigation<ProfileScreenProps['navigation']>();
   return (
     <View style={styles.container}>
       {/* Left Section: Logo and Title */}
       <View style={styles.leftSection}>
-        <CrayonLogo />
+        <CrayonLogo width={35} height={35}/>
         <Text style={styles.title}>Crayon Box</Text>
       </View>
 
@@ -23,8 +26,8 @@ const DashboardHeader = ({ imageUrl }: DashboardHeaderProps) => {
         <TouchableOpacity style={styles.iconButton}>
           <NotificationIcon />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.iconButton}>
-          <Avatar imageUrl={imageUrl} width={45} height={45} />
+        <TouchableOpacity style={styles.iconButton} onPress={()=>{navigation.navigate('Profile')}}>
+          <Avatar imageUrl={imageUrl} width={40} height={40} />
         </TouchableOpacity>
       </View>
     </View>

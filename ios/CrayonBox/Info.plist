@@ -45,8 +45,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<key>UIStatusBarStyle</key>
+<string>UIStatusBarStyleLightContent</string>
+<key>UIViewControllerBasedStatusBarAppearance</key>
+<false/>
+
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-Bold.ttf</string>

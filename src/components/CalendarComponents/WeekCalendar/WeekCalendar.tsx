@@ -221,9 +221,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     height: 60,
-    width: 50,
+    width: 40,
     backgroundColor: '#B0D4F8',
-    borderRadius: 12,
+    borderRadius: 18,
     marginVertical: 4,
   },
   selectedDateButton: {
@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FF8A80',
   },
   dayText: {
-    fontSize: 12,
+    fontSize: 10,
     color: '#4D4D4D',
     fontWeight: '500',
   },

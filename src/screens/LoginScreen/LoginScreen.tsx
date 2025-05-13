@@ -26,7 +26,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={'light-content'} backgroundColor={'#626EE6'} />
+      <StatusBar barStyle={'dark-content'} backgroundColor={'#626EE6'} translucent={true}/>
       <ScrollView style={styles.innerContainer} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled">
       {/* Wrap with TouchableWithoutFeedback to dismiss the keyboard */}
       {/* <TouchableWithoutFeedback onPress={Keyboard.dismiss}> */}

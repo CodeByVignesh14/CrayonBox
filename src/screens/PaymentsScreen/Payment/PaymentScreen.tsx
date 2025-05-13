@@ -3,6 +3,8 @@ import { SafeAreaView, StatusBar, Text, TouchableOpacity, View } from 'react-nat
 import styles from './Payment.styles';
 import ScreenHeader from '../../../components/HeaderComponent/ScreenHeader';
 import CrayonButton from '../../../components/Buttons/CrayonButton';
+import { useNavigation } from '@react-navigation/native';
+import { PaymentScreenProps } from './Payment.types';
 
 type Fee = {
   title: string;
@@ -19,7 +21,7 @@ const PaymentScreen: React.FC<PaymentSummaryProps> = ({ fees, total, onOptionSel
   const [selectedOption, setSelectedOption] = useState<string>('Pay with UPI');
 
   const paymentOptions = ['Debit / Credit Card', 'Internet Banking', 'Pay with UPI'];
-
+  const navigation = useNavigation<PaymentScreenProps['navigation']>();
   const handleOptionSelect = (option: string) => {
     setSelectedOption(option);
     onOptionSelect?.(option);
@@ -28,6 +30,7 @@ const PaymentScreen: React.FC<PaymentSummaryProps> = ({ fees, total, onOptionSel
   const onPressPayment = () => {
     // Add payment logic here
     console.log('Payment initiated with option:', selectedOption);
+    navigation.navigate('PaymentDetails');
   };
 
   return (

@@ -37,7 +37,7 @@ const DashboardScreen: React.FC<DashboardScreenProps> = ({navigation}) => {
       imageComp: <TimeTable width={48} height={48} />,
       backgroundColor: 'rgba(90, 132, 250, 0.1)',
       borderColor: '#5A84FA80',
-      navData:'Diary',
+      navData:'TimeTable',
     },
     {
       title: '92%',
@@ -46,7 +46,7 @@ const DashboardScreen: React.FC<DashboardScreenProps> = ({navigation}) => {
       imageComp: <Attendence width={48} height={48} />,
       backgroundColor: 'rgba(66, 81, 225, 0.1)',
       borderColor: '#4251E180',
-      navData:'Diary',
+      navData:'Attendance',
     },
     {
       title: '04',
@@ -73,15 +73,15 @@ const DashboardScreen: React.FC<DashboardScreenProps> = ({navigation}) => {
       imageComp: <Rank width={48} height={48} />,
       backgroundColor: 'rgba(12, 175, 50, 0.1)',
       borderColor: '#0CAF3280',
-      navData:'Diary',
+      navData:'Results',
     },
   ];
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={'dark-content'} backgroundColor={'white'} />
+      <StatusBar barStyle={'dark-content'} backgroundColor={'white'} translucent={false}/>
       <DashboardHeader
-        imageUrl="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imageUrl="https://avatar.iran.liara.run/public"
       />
       <ScrollView
         style={{ flex: 1, backgroundColor: '#FFFFFF' }}

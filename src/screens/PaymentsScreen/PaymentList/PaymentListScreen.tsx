@@ -78,10 +78,10 @@ const PaymentListScreen: React.FC<PaymentListScreenProps> = ({navigation}) => {
         )}
       </View>
       <View style={styles.actionContainer}>
-        <TouchableOpacity style={styles.receiptButton}>
+        <TouchableOpacity onPress={()=>{navigation.navigate('PaymentStatus')}} style={styles.receiptButton}>
           <Text style={styles.buttonText}>Receipt</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>{navigation.navigate('PaymentDetails')}}>
           <Text style={styles.detailsText}>Details</Text>
         </TouchableOpacity>
       </View>
